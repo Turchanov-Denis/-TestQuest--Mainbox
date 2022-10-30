@@ -1,0 +1,15 @@
+body {
+    background-color: hsla(0, 6%, 82%, 0.427);
+}
+
+.wrapper {
+    background-color: #fff;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap');
+@import '_todoForm.scss'
