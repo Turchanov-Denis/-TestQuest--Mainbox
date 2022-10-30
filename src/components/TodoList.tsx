@@ -12,7 +12,7 @@ export const TodoList: React.FC<TodoListProps> = ({ todos }) => {
                     <li className='todo'>
                         <label>
                             <input type='checkbox'></input>
-                            <span>item</span>
+                            <span>{item.title}</span>
                             <button>X</button>
                         </label>
                     </li>
