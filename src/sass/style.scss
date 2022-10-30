@@ -1,8 +1,10 @@
 body {
     background-color: hsla(0, 6%, 82%, 0.427);
+    padding-top: 100px;
 }
 
 .wrapper {
+    
     background-color: #fff;
     max-width: 600px;
     height: 400px;
@@ -12,4 +14,5 @@ body {
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap');
-@import '_todoForm.scss'
+@import '_todoForm.scss';
+@import '_todoList.scss';

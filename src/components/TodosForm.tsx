@@ -1,14 +1,31 @@
 import React from 'react'
-import {useState} from 'react'
-import TextField from '@mui/material/TextField';
-export const TodosForm: React.FC<any> = () => {
+import { useState } from 'react'
 
-    const [title,setTitle] = useState<string>('todos')
+interface TodoFormProps {
+    addHandler(title: string): void,
 
+}
+
+export const TodosForm: React.FC<TodoFormProps> = ({ addHandler }) => {
+
+    const [title, setTitle] = useState<string>('')
+
+
+    const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTitle(event.target.value)
+    }
+    const keyPressHandler = (event: React.KeyboardEvent) => {
+        if (event.key == 'Enter') {
+            console.log(title)
+            setTitle('')
+            addHandler(title)
+        }
+
+    }
     return (
         <div className='todo-form'>
-            <h1>{title}</h1>
-            <TextField id="standard-basic" label="Standard" variant="standard" />
+            <h1>todos</h1>
+            <input value={title} onChange={changeHandler} onKeyPress={keyPressHandler} placeholder='Create your note' />
 
         </div>
     )
