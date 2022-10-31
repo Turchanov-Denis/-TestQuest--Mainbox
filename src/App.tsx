@@ -33,6 +33,10 @@ const App: React.FC = () => {
     setTodos(prev => prev.filter(item => item.id !== id))
   }
 
+  const clearComplited = () => {
+    setTodos(prev=> prev.filter(item => item.complited == false))
+  }
+
   useEffect(() => {
     console.log(localStorage.getItem('todos'))
     const saved = JSON.parse(localStorage.getItem('todos') || '[]') as todoArray[]
@@ -43,7 +47,7 @@ const App: React.FC = () => {
     <div className='wrapper'>
       <TodosForm addHandler={addHandler}></TodosForm>
       <TodoList toggleHandler={toggleHandler} removeHandler={removeHandler} todos={todos}></TodoList>
-      <ActionBar todos={todos}></ActionBar>
+      <ActionBar clearComplited={clearComplited} todos={todos}></ActionBar>
     </div>
   );
 }

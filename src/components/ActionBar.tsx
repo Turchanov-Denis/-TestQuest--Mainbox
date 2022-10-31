@@ -4,9 +4,10 @@ import { todoArray } from '../interfaces'
 
 interface ActionBarProps {
     todos: todoArray[],
+    clearComplited(): void
 }
 
-export const ActionBar: React.FC<ActionBarProps> = ({ todos }) => {
+export const ActionBar: React.FC<ActionBarProps> = ({ todos,clearComplited }) => {
 
     return (
         <div className='action'>
@@ -24,7 +25,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({ todos }) => {
                 <button className='action-button'>Complited</button>
             </div>
 
-            <button className='action-button'>Clear complited</button>
+            <button onClick={clearComplited} className='action-button'>Clear complited</button>
         </div>
     )
 
