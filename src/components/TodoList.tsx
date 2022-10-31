@@ -4,11 +4,10 @@ interface TodoListProps {
     todos: todoArray[],
     toggleHandler(id: number): void,
     removeHandler(id: number): void,
+    actionFilter: string
 }
 
 export const TodoList: React.FC<TodoListProps> = ({ todos, removeHandler, toggleHandler }) => {
-
-
     return (
         <ul style={{ 'paddingTop': '15px' }}>
             {todos.map(item => {
