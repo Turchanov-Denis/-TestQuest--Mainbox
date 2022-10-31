@@ -14,7 +14,7 @@ export const TodoList: React.FC<TodoListProps> = ({ todos, removeHandler, toggle
                 return (
                     <li className={item.complited ? 'todo todo-complited' : 'todo'} key={item.id}>
                         <label>
-                            <input onChange={() => toggleHandler(item.id)} type='checkbox' checked={item.complited} ></input>
+                            <input data-testid='change-input' onChange={() => toggleHandler(item.id)} type='checkbox' checked={item.complited} ></input>
                             <span>{item.title}</span>
                             <button data-testid='delete-button' onClick={() => removeHandler(item.id)}>X</button>
                         </label>

@@ -24,6 +24,17 @@ describe('ToDO testing', () => {
     expect(todoItem).toBeInTheDocument()
   })
 
+  test('Input value -> Input keyEvent -> add 1 item -> current: Input Check', () => {
+    render(<App />);
+    const checkedInput = screen.getByTestId('change-input')
+    fireEvent.click(checkedInput)
+  })
+
+  test('Test add through-line text class', () => {
+    const { container } = render(<App />)
+    expect(container.getElementsByClassName('todo-complited')[0]).toBeDefined();
+  })
+
   test('Input value -> Input keyEvent -> add 1 item -> delete item', () => {
     render(<App />);
     const deleteButton = screen.getByTestId('delete-button')
