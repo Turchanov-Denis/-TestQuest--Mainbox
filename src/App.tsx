@@ -15,6 +15,14 @@ const App: React.FC = () => {
     setTodos(prev => [todo, ...prev])
   }
 
+  const toggleHandler = (id: number) => {
+
+  }
+
+  const removeHandler = (id: number) => {
+
+  }
+
   return (
     <div className='wrapper'>
       <TodosForm addHandler={addHandler}></TodosForm>
