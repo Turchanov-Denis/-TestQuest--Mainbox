@@ -25,7 +25,7 @@ export const TodosForm: React.FC<TodoFormProps> = ({ addHandler }) => {
     return (
         <div className='todo-form'>
             <h1>todos</h1>
-            <input className='main-input' value={title} onChange={changeHandler} onKeyPress={keyPressHandler} placeholder='What need to be done?' />
+            <input data-testid='main-input' className='main-input' value={title} onChange={changeHandler} onKeyPress={keyPressHandler} placeholder='What need to be done?' />
 
         </div>
     )
