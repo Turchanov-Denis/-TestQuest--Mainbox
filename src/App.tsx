@@ -39,18 +39,6 @@ const App: React.FC = () => {
   const filterHandler = (filter: string) => {
     setActionFilter(filter)
   }
-  // const filterArray = () => {
-  //   if (actionFilter === 'all') {
-  //     return todos
-  //   }
-  //   if (actionFilter === 'active') {
-  //     return todos.filter(item => item.complited == false)
-  //   }
-  //   if (actionFilter === 'completed') {
-  //     return todos.filter(item => item.complited == true)
-  //   }
-  // }
-
   useEffect(() => {
     console.log(localStorage.getItem('todos'))
     const saved = JSON.parse(localStorage.getItem('todos') || '[]') as todoArray[]

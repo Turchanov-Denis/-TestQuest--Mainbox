@@ -19,7 +19,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({ todos, clearComplited, act
                     return previousValue + 1
                 }
                 return previousValue
-            }, 0)}</div>
+            }, 0)} items left</div>
 
             <div>
                 <button onClick={() => filterHandler('all')} className='action-button action-button-active'>All</button>
