@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/-TestQuest--Mainbox/static/css/main.0cb1f504.css",
+    "main.js": "/-TestQuest--Mainbox/static/js/main.66a2e2d6.js",
+    "static/js/787.7f2c2da0.chunk.js": "/-TestQuest--Mainbox/static/js/787.7f2c2da0.chunk.js",
+    "index.html": "/-TestQuest--Mainbox/index.html",
+    "main.0cb1f504.css.map": "/-TestQuest--Mainbox/static/css/main.0cb1f504.css.map",
+    "main.66a2e2d6.js.map": "/-TestQuest--Mainbox/static/js/main.66a2e2d6.js.map",
+    "787.7f2c2da0.chunk.js.map": "/-TestQuest--Mainbox/static/js/787.7f2c2da0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cb1f504.css",
+    "static/js/main.66a2e2d6.js"
+  ]
+}
