@@ -3,6 +3,7 @@ import './sass/style.scss'
 import { TodosForm } from './components/TodosForm'
 import { TodoList } from './components/TodoList';
 import { todoArray } from './interfaces'
+import { ActionBar } from './components/ActionBar';
 
 const App: React.FC = () => {
 
@@ -17,9 +18,7 @@ const App: React.FC = () => {
       }
       setTodos(prev => [todo, ...prev])
     }
-
   }
-
   const toggleHandler = (id: number) => {
     setTodos(prev => prev.map(item => {
       if (item.id === id) {
@@ -39,12 +38,12 @@ const App: React.FC = () => {
     const saved = JSON.parse(localStorage.getItem('todos') || '[]') as todoArray[]
     setTodos(saved)
   }, [])
-
   useEffect(() => { localStorage.setItem('todos', JSON.stringify(todos)) }, [todos])
   return (
     <div className='wrapper'>
       <TodosForm addHandler={addHandler}></TodosForm>
       <TodoList toggleHandler={toggleHandler} removeHandler={removeHandler} todos={todos}></TodoList>
+      <ActionBar todos={todos}></ActionBar>
     </div>
   );
 }
